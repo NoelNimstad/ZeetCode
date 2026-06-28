@@ -1,6 +1,15 @@
 const std = @import("std");
 
-// Expect that each `list` and `sum` has at least one solution.
+/// Given an array `list` of numbers (`usize`) and a `sum`,
+/// identify the pair of indeces at which the numbers in `list`
+/// sum to `sum`.
+///
+/// For example: for `list=[_]usize{ 1, 2, 3, 4, 5 }` and `sum=9`,
+/// the function `solution` should return `[2]uszie{3, 4}` since
+/// `list[3]+list[4]=4+5=9=sum`
+///
+/// You may expect that each `list` and `sum` has at least one
+/// solution. You only need to return one, in any order.
 pub fn solution(list: []const usize, sum: usize) ![2]usize {
     _ = list;
     _ = sum;
