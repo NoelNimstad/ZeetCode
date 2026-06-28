@@ -29,9 +29,7 @@ test "Two sum" {
 
         const i = random.uintLessThan(usize, numbers.len);
         var j = random.uintLessThan(usize, numbers.len);
-        while (i == j) {
-            j = random.uintLessThan(usize, numbers.len);
-        }
+        while (i == j) : (j = random.uintLessThan(usize, numbers.len)) {}
 
         const target = numbers[i] + numbers[j];
         const result = try solution(&numbers, target);
