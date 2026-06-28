@@ -1,5 +1,4 @@
 const std = @import("std");
-const problem = @import("../problems/000_two-sum.zig");
 
 pub fn solution(list: []const usize, sum: usize) ![2]usize {
     var map = std.AutoHashMap(usize, usize).init(std.heap.page_allocator);
