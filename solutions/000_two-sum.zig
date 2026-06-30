@@ -1,7 +1,7 @@
 const std = @import("std");
 
 pub fn solution(list: []const usize, sum: usize) ![2]usize {
-    var map = std.AutoHashMap(usize, usize).init(std.heap.page_allocator);
+    var map = std.AutoHashMap(usize, usize).init(std.heap.smp_allocator);
     defer map.deinit();
 
     for (list, 0..) |value, i| {
